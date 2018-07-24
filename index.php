@@ -1,13 +1,4 @@
 <?php
-/* comprobamos que el usuario tenga un valor y que sea entero */
-if(isset($_REQUEST['enviar'])) {
-		// echo "entro";
-        /*asignamos a una nueva varible y si no asignamos a 10*/
-        // $number_of_posts = isset($_GET['num']) ? intval($_GET['num']) : 10; //10 es por defecto
-        /*convertimos a letras minusculas y asignamos xml por defecto*/
-        $format = $_REQUEST['formato']; //xml es por defecto
-        /* creamos el array con los datos que nos devolvio la query*/
-        //echo "tengo: $format";
         $posts = Array(Array(
         				"Ingeniería del software","Ian Sommerville","Pearson Educación"),
         				Array(
@@ -20,5 +11,4 @@ if(isset($_REQUEST['enviar'])) {
 	        				"Problemas de ingeniería de sistemas","José Ramón Llata García","Marcombo")
 		        	);
         echo json_encode(array('posts'=>$posts));
-}
 ?>
